@@ -17,7 +17,7 @@
 }
 
 .axis {
-  font: 30px sans-serif;
+  font: 20px sans-serif;
 }
 
 .axis path,

@@ -23,8 +23,10 @@
 <body>
 <div class = "layout">
 <div style=padding-left:500px><h1 class="vzh1">BI Reporting</h1></div>
-<img id="copy" src="bars2.jpg" alt="Bars" style="width:304px;height:auto;padding-top: 109px;">
+<div class="vzlogoContainer">
+<img id="copy"  src="bars2.jpg" alt="Bars" style="width:304px;height:auto;padding-top: 109px;">
 <img id="paste" src="piechart.jpg" alt="Bars" style="width:404px;height:300px; padding-top:100px;">
+</div>
 <div style=padding-left:500px>
 <a class="vzlink" href="OrdersPlacedEnter.jsp">Orders Placed</a><br>
 <a class="vzlink" href="OrdersProvisionedEnter.jsp">Orders Provisioned</a><br>

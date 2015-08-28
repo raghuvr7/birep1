@@ -25,7 +25,7 @@ public class TotalBillAmount extends HttpServlet {
 		Class.forName ("oracle.jdbc.driver.OracleDriver");
 		Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","scott","admin");
 
-		String filename = "C:\\kishore\\reports\\WebContent\\TotalBillAmount.csv";
+		String filename = "C:\\Users\\admin\\Desktop\\localrep\\reports\\WebContent\\TotalBillAmount.csv";
 		FileWriter fw = new FileWriter(filename);
 		PreparedStatement pst;
 		String querry=" select to_char(bill_gen_date,'month'),sum(current_bill_amount+past_due) from payment where to_char(bill_gen_date,'year')=? group by to_char(bill_gen_date,'month')";
