@@ -41,9 +41,9 @@ try {
 month=request.getParameter("month");
 year=request.getParameter("year");
 Class.forName("oracle.jdbc.driver.OracleDriver");
-String url="jdbc:oracle:thin:@localhost:1521:orcl";
-String user="scott";
-String pass="admin";
+String url="jdbc:oracle:thin:@192.168.0.121:1521:orcl";
+String user="hr";
+String pass="hr";
 Connection con=DriverManager.getConnection(url,user,pass);
 Connection con1=DriverManager.getConnection(url,user,pass);
 PreparedStatement pst,pst1;
@@ -58,7 +58,7 @@ pst1.setString(2,year);
 ResultSet rs=pst.executeQuery();
 ResultSet rs1=pst1.executeQuery();
 
-String filename = "C:\\kishore\\reports\\WebContent\\CallsPortals.csv";
+String filename = "C:\\Users\\admin\\Desktop\\localrep\\reports\\WebContent\\CallsPortals.csv";
 FileWriter fw = new FileWriter(filename);
 fw.append("name");
 fw.append(',');

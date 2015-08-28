@@ -4,11 +4,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<jsp:include page="Header.jsp"></jsp:include>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" href="theme.css">
+<meta charset="ISO-8859-1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <title>Reports on Bills and payments</title>
 </head>
 <body>
-<table border=2>
+<div class = "layout">
+<table border=2 class="vztable">
+<tbody>
 <tr>
 <th>Customer ID</th><th>Bill Amount</th><th>Payments</th>
 </tr>
@@ -19,6 +26,9 @@
 <td><c:out value="${e.countPayments}"></c:out>
 </tr>
 </c:forEach> 
+</tbody>
 </table>
+</div>
+<jsp:include page="Header2.jsp"></jsp:include>
 </body>
 </html>

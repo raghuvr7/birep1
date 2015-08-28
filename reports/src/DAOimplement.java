@@ -19,7 +19,7 @@ public class DAOimplement implements DAOInterface{
 		
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			String url="jdbc:oracle:thin:@localhost:1521:orcl";
+			String url="jdbc:oracle:thin:@192.168.0.16:1521:orcl";
 			String user="scott";
 			String pass="tiger";
 			con=DriverManager.getConnection(url,user,pass);
@@ -34,7 +34,25 @@ public class DAOimplement implements DAOInterface{
 		}
 		return con;
 	}
-
+public Connection getConnection2() {
+		
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			String url="jdbc:oracle:thin:@192.168.0.121:1521:orcl";
+			String user="hr";
+			String pass="hr";
+			con=DriverManager.getConnection(url,user,pass);
+			
+			
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return con;
+	}
 	@Override
 	public List<OrderService> orderView(Date filterf ,Date filtert) {
 		
@@ -123,7 +141,7 @@ public class DAOimplement implements DAOInterface{
 	}
 
 	public List<PurchasedProduct> purchasedView(String year){
-		Connection con=getConnection();
+		Connection con=getConnection2();
 		List<PurchasedProduct> list=new ArrayList<PurchasedProduct>();
 		String querry="select count(product_services.order_id),product_description,to_char(order_negotiation_date,'month') from product_services inner join customer_orders on customer_orders.order_id=product_services.order_id where to_char(order_negotiation_date,'yyyy')=? group by product_description,to_char(order_negotiation_date,'month')";
 		try {

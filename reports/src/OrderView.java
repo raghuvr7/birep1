@@ -42,9 +42,9 @@ public class OrderView extends HttpServlet {
 			RequestDispatcher rd=request.getRequestDispatcher("View.jsp");
 			rd.forward(request,response);*/
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			String url="jdbc:oracle:thin:@localhost:1521:orcl";
-			String user="scott";
-			String pass="tiger";
+			String url="jdbc:oracle:thin:@192.168.0.121:1521:orcl";
+			String user="hr";
+			String pass="hr";
 			Connection con=DriverManager.getConnection(url,user,pass);
 			PreparedStatement pst;
 			String querry="select count(customer_orders.order_id),service_description.service_name from customer_orders Inner join product_services on customer_orders.order_id=product_services.order_id inner join service_description on product_services.service_id=service_description.service_id where customer_orders.order_negotiation_date between ? and ? group by  service_description.service_name";

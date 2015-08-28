@@ -23,7 +23,7 @@ public class TotalBillAmount extends HttpServlet {
 	try
 	{
 		Class.forName ("oracle.jdbc.driver.OracleDriver");
-		Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","scott","admin");
+		Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@192.168.0.16:1521:orcl","scott","tiger");
 
 		String filename = "C:\\Users\\admin\\Desktop\\localrep\\reports\\WebContent\\TotalBillAmount.csv";
 		FileWriter fw = new FileWriter(filename);

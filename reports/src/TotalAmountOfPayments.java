@@ -24,9 +24,9 @@ public class TotalAmountOfPayments extends HttpServlet {
 		try
 		{
 			Class.forName ("oracle.jdbc.driver.OracleDriver");
-			Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","scott","admin");
+			Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@192.168.0.16:1521:orcl","scott","tiger");
 
-			String filename = "C:\\kishore\\reports\\WebContent\\TotalAmountOfPayments.csv";
+			String filename = "C:\\Users\\admin\\Desktop\\localrep\\reports\\WebContent\\TotalAmountOfPayments.csv";
 			FileWriter fw = new FileWriter(filename);
 			PreparedStatement pst;
 			String querry=" select to_char(bill_gen_date,'month'),sum(amount_paid) from payment where to_char(bill_gen_date,'year')=? group by to_char(bill_gen_date,'month')";

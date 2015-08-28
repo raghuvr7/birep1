@@ -36,7 +36,7 @@ public class OrdersPlaced extends HttpServlet {
 		Class.forName("oracle.jdbc.driver.OracleDriver");
 		String url="jdbc:oracle:thin:@192.168.0.121:1521:orcl";
 		
-		 String filename = "C:\\kishore\\reports\\WebContent\\OrdersPlaced.csv";
+		 String filename = "C:\\Users\\admin\\Desktop\\localrep\\reports\\WebContent\\OrdersPlaced.csv";
 		 FileWriter fw = new FileWriter(filename);
 		
 		 String user="hr";

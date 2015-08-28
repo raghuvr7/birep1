@@ -44,12 +44,12 @@ public class BrokenPromises extends HttpServlet {
 			String pass="tiger";
 			Connection con=DriverManager.getConnection(url,user,pass);
 			PreparedStatement pst;
-			String querry="select count(orders_demo.order_id),to_char(orders_demo.order_due_date,'month') from orders_demo inner join circuit_design on orders_demo.order_id=circuit_design.order_id where circuit_design.due_date<circuit_design.modified_date and orders_demo.order_id=circuit_design.order_id and to_char(orders_demo.order_due_date,'yyyy')=? group by to_char(orders_demo.order_due_date,'month')"; 
+			String querry="select count(orders_demo.order_id),to_char(circuit_design.due_date,'month') from orders_demo inner join circuit_design on orders_demo.order_id=circuit_design.order_id where circuit_design.due_date<circuit_design.modified_date and orders_demo.order_id=circuit_design.order_id and to_char(orders_demo.order_due_date,'yyyy')=? group by to_char(circuit_design.due_date,'month')"; 
 			pst=con.prepareStatement(querry);
 			pst.setString(1,year);
 			ResultSet rs=pst.executeQuery();
 			
-			String filename = "C:\\kishore\\reports\\WebContent\\BrokenPromises.csv";
+			String filename = "C:\\Users\\admin\\Desktop\\localrep\\reports\\WebContent\\BrokenPromises.csv";
 			FileWriter fw = new FileWriter(filename);
 			fw.append("ordersNP");
 			fw.append(',');

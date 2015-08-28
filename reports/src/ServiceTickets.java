@@ -37,13 +37,13 @@ public class ServiceTickets extends HttpServlet {
 		java.sql.Date Tdate=new java.sql.Date(tDate.getTime());
 		
 		Class.forName("oracle.jdbc.driver.OracleDriver");
-		String url="jdbc:oracle:thin:@localhost:1521:orcl";
+		String url="jdbc:oracle:thin:@192.168.0.121:1521:orcl";
 		
-		 String filename = "C:\\kishore\\reports\\WebContent\\ServiceTickets.csv";
+		 String filename = "C:\\Users\\admin\\Desktop\\localrep\\reports\\WebContent\\ServiceTickets.csv";
 		 FileWriter fw = new FileWriter(filename);
 		
-		 String user="scott";
-		String pass="admin";
+		 String user="hr";
+		String pass="hr";
 		
 		Connection con=DriverManager.getConnection(url,user,pass);
 		PreparedStatement pst;
@@ -89,7 +89,7 @@ public class ServiceTickets extends HttpServlet {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 		}
-		RequestDispatcher r =request.getRequestDispatcher("ServiceTicketD3.jsp");
+		RequestDispatcher r =request.getRequestDispatcher("ServiceTicketsD3.jsp");
 		r.forward(request, response);
 
 	}

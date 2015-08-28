@@ -27,13 +27,13 @@ public class ServiceStatus extends HttpServlet {
 		System.out.println("done");
 		try {
 		Class.forName("oracle.jdbc.driver.OracleDriver");
-		String url="jdbc:oracle:thin:@localhost:1521:orcl";
+		String url="jdbc:oracle:thin:@192.168.0.121:1521:orcl";
 		
-		 String filename = "C:\\kishore\\reports\\WebContent\\pie.csv";
+		 String filename = "C:\\Users\\admin\\Desktop\\localrep\\reports\\WebContent\\pie.csv";
 		 FileWriter fw = new FileWriter(filename);
 		
-		 String user="scott";
-		String pass="admin";
+		 String user="hr";
+		String pass="hr";
 		
 		Connection con=DriverManager.getConnection(url,user,pass);
 		PreparedStatement pst;

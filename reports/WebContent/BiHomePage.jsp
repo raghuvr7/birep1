@@ -35,8 +35,7 @@
 <a class="vzlink" href="CallsPortals.jsp">Service Calls vs Support Portal</a><br>
 <a class="vzlink" href="BrokenPromisesEnter.jsp">Broken Promises</a><br>
 <a class="vzlink" href="BillAmountPayment.jsp">Report on Bill amount and Payments</a><br>
-<a class="vzlink" href="">Customer accessing Self service</a><br>
-<a class="vzlink" href="PurchasedYear.jsp">Most purchased Products</a><br>
+<a class="vzlink" href="PurchasedYear.jsp">Purchased Products</a><br>
 <a class="vzlink" href="ServiceStatus">Service Status</a>
 </div>
 </div>

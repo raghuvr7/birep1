@@ -34,10 +34,10 @@ public class OrdersProvisioned extends HttpServlet {
 		java.util.Date tDate = formatter.parse(tdate);
 		java.sql.Date Tdate=new java.sql.Date(tDate.getTime());
 		Class.forName("oracle.jdbc.driver.OracleDriver");
-		String url="jdbc:oracle:thin:@192.168.0.168:1521:orcl";
+		String url="jdbc:oracle:thin:@192.168.0.240:1521:orcl";
 		String user="scott";
 		String pass="tiger";
-		String filename = "C:\\kishore\\reports\\WebContent\\OrdersProvisioned.csv";
+		String filename = "C:\\Users\\admin\\Desktop\\localrep\\reports\\WebContent\\OrdersProvisioned.csv";
 		 FileWriter fw = new FileWriter(filename);
 		Connection con=DriverManager.getConnection(url,user,pass);
 		PreparedStatement pst;

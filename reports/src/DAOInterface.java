@@ -5,6 +5,7 @@ import java.util.List;
 
 public interface DAOInterface {
 	public Connection getConnection();
+	public Connection getConnection2();
 	public List<OrderService> orderView(Date filterf,Date filtert); 
 	public void closeDBconn();
 	public List<Payment> paymentView(Date filterf,Date filtert);
